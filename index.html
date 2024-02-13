@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Encriptador</title>
 </head>
 <body>
-    <h1>Encriptador</h1>
+    <header>
+        <img class="logo" src="images/logo.png">
+    </header>
+    <h1 class="titulo">Encriptador</h1>
     <!-- Formulario para introducir el texto a encriptar -->
-    <div>
-        <textarea></textarea>
+    <div class="ingreso-texto">
+        <textarea placeholder="Escriba su texto aquí"></textarea>
+        <img src="images/exclamacion.png">
+        <p>Solo letras minúsculas y sin tildes</p>
     </div>
     <!-- Botón para encriptar -->
-    <div>
-        <button></button>
-    </div>
+    <div class="botones-encripcion">
+        <button class="boton-encriptar">Encriptar</button>
     <!-- Botón para desencriptar -->
-    <div>
-        <button></button>
+        <button class="boton-desencriptar">Desencriptar</button>
     </div>
     <!-- Área para ver el texto encriptado o desencriptado-->
-    <div></div>
+    <div class="texto-encriptado">
+        <textarea disabled></textarea>
+    </div>
     <footer>
-
+        <p class="presentacion-desarrollador">Desarrollado por JOGN-Teacher-dev como el primer challenge para el programa Oracle ONE</p>
     </footer>
 </body>
 </html>
