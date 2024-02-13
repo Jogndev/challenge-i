@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.logo {
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+.titulo{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 10px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.ingreso-texto {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.ingreso {
+    margin-left: 25px;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px 5px;
+    resize: none;
+}
+
+.label-input {
+    color: #0A3871;
+    font-size: 3em;
+}
+
+.mensaje {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.mensaje-texto {
+    color: rgb(139, 137, 137);
+    font-size: 1em;
+}
 
 
 .boton-encriptar {
@@ -6,6 +60,10 @@
     border: 0.5px solid #0A3871;
     border-radius: 5px 5px;
     cursor: pointer;
+    height: auto;
+    width: 328px;
+    padding: 12px;
+    font-size: 1em;
 }
 
 .boton-desencriptar {
@@ -14,6 +72,11 @@
     border: 0.5px  solid #0A3871;
     border-radius: 5px 5px;
     cursor: pointer;
+    height: auto;
+    width: 328px;
+    padding: 12px;
+    margin-bottom: 3px;
+    font-size: 1em;
 }
 
 .boton-encriptar:hover {
@@ -22,4 +85,39 @@
 
 .boton-desencriptar:hover {
     background-color: #eff1fa;
+}
+
+.texto-encriptado {
+    max-width: 25%;
+}
+
+.mensaje-destacado {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+
+.textarea-disabled {
+    width: 100%;
+    resize: none;
+}
+
+.textarea-disabled::placeholder {
+    font-size: 1em;
+    color: #072B61;
+}
+
+footer {
+    flex-direction: column;
+    background-color: #072B61;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    color: white;
+    height: 25vh;
+}
+
+.presentacion-desarrollador {
+    padding: 5%;
 }

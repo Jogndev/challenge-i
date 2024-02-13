@@ -9,27 +9,62 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="images/logo.png">
+
+        <img class="logo" src="images/logo.png" alt="logo de alura latam">
+        
     </header>
+
     <h1 class="titulo">Encriptador</h1>
+
     <!-- Formulario para introducir el texto a encriptar -->
-    <div class="ingreso-texto">
-        <textarea placeholder="Escriba su texto aquí"></textarea>
-        <img src="images/exclamacion.png">
-        <p>Solo letras minúsculas y sin tildes</p>
-    </div>
-    <!-- Botón para encriptar -->
-    <div class="botones-encripcion">
-        <button class="boton-encriptar">Encriptar</button>
-    <!-- Botón para desencriptar -->
-        <button class="boton-desencriptar">Desencriptar</button>
-    </div>
+    <div class="contenedor">
+
+        <div class="ingreso-texto">
+
+            <label class="label-input" for="input-texto">Ingresa tu texto:</label>
+
+            <textarea id="input-texto" class="ingreso" placeholder="Ingrese su texto aquí"></textarea>
+
+            <div class="mensaje">
+
+                <img class="mensaje-icono" src="images/exclamacion.png">
+
+                <p class="mensaje-texto">Solo letras minúsculas y sin tildes</p>
+
+            </div>
+
+        
+
+        <!-- Botón para encriptar -->
+            <div class="botones-encripcion">
+
+                <button type="button" class="boton-encriptar">Encriptar</button>
+
+            <!-- Botón para desencriptar -->
+                <button type="button" class="boton-desencriptar">Desencriptar</button>
+
+            </div>
+
+        </div>
+    
     <!-- Área para ver el texto encriptado o desencriptado-->
-    <div class="texto-encriptado">
-        <textarea disabled></textarea>
+        <div class="texto-encriptado">
+
+            <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
+
+            <h2 class="mensaje-destacado">Ningún mensaje fue encontrado</h2>
+
+            <textarea class="textarea-disabled" disabled placeholder="Ingresa el texto que deseas encriptar o desencriptar en el área de su izquierda"></textarea>
+
+        </div>
+
     </div>
+
     <footer>
+
         <p class="presentacion-desarrollador">Desarrollado por JOGN-Teacher-dev como el primer challenge para el programa Oracle ONE</p>
+
     </footer>
+
 </body>
 </html>
