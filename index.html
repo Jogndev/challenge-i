@@ -9,84 +9,84 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
 <body>
-    <header>
 
-        <img class="logo" src="images/logo.png" alt="logo de alura">
-        
-    </header>
+    <div id="contenedor-principal">
 
-    <main>
+        <header>
 
-        <!-- Formulario para introducir el texto a encriptar -->
-        <section class="seccion-1">
+            <img class="logo" src="images/Logo.svg" alt="logo de alura">
+            
+        </header>
 
-            <div class="ingreso-texto">
+        <main>
 
-                <textarea id="input-texto" class="ingreso" placeholder="Ingrese su texto aquí"></textarea>
+            <!-- Formulario para introducir el texto a encriptar -->
+            <section class="seccion-1">
 
-            </div>
+                <div class="ingreso-texto">
 
-            <div class="mensaje">
+                    <textarea class="ingreso" placeholder="Ingrese su texto aquí"></textarea>
 
-                <img class="mensaje-icono" src="images/exclamacion.png">
+                </div>
 
-                <p class="mensaje-texto">Solo letras minúsculas y sin tildes</p>
+                <div class="mensaje">
 
-            </div>
+                    <img class="mensaje-icono" src="images/exclamacion.png">
 
-            <div class="botones-encripcion">
+                    <p class="mensaje-texto">Solo letras minúsculas y sin tildes</p>
 
-                <!-- Botón para encriptar -->
-                <input type="button" class="boton-encriptar" value="Encriptar"></input>
+                </div>
 
-                <!-- Botón para desencriptar -->
-                <input type="button" class="boton-desencriptar" value="Desencriptar"></input>
+                <div class="botones-encripcion">
 
-            </div>
+                    <!-- Botón para encriptar -->
+                    <input type="button" class="boton-encriptar" value="Encriptar"></input>
 
-        </section>
+                    <!-- Botón para desencriptar -->
+                    <input type="button" class="boton-desencriptar" value="Desencriptar"></input>
 
-        <section class="seccion-2">
+                </div>
 
-        <!-- Área para ver el texto encriptado o desencriptado-->
-            <div class="muñeco">
+            </section>
 
-                <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
+            <section class="seccion-2">
 
-            </div>
+            <!-- Área para ver el texto encriptado o desencriptado-->
+                <div class="muneco">
 
-            <div class="contenedor-bajoMuñeco">
+                    <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
 
-                <h2 class="mensaje-destacado">Ningún mensaje fue encontrado</h2>
+                </div>
 
-                <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+                <div class="contenedor-bajoMuneco">
 
-            </div>
+                    <h2 class="mensaje-destacado">Ningún mensaje fue encontrado</h2>
 
-            <div class="contenedor-copiar">
+                    <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
 
-                <input type="button" class="boton-copiar" value="Copiar"></input>
+                </div>
 
-            </div>
+                <div class="contenedor-copiar">
 
-            <div class="contenedor-resultado">
+                    <input type="button" class="boton-copiar" value="Copiar"></input>
 
-                <p class="texto-resultado"></p>
+                </div>
 
-            </div>
+                <div class="contenedor-resultado">
 
-        </section>
+                    <p class="texto-resultado"></p>
 
-    </main>
+                </div>
 
-    <footer>
+            </section>
 
-        <p class="presentacion-desarrollador">Desarrollado por JOGN-Teacher-dev como el primer challenge para el programa Oracle ONE</p>
+        </main>
 
-    </footer>
+    </div>
 
     <script src=""></script>
 </body>
