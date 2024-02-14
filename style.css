@@ -205,6 +205,8 @@ main {
 }
 
 footer {
+    margin-top: 100vh;
+    position:flex;
     flex-direction: column;
     background-color: #072B61;
     text-align: center;
