@@ -17,7 +17,7 @@
     <h1 class="titulo">Encriptador</h1>
 
     <!-- Formulario para introducir el texto a encriptar -->
-    <div class="contenedor">
+    <section class="seccion-1">
 
         <div class="ingreso-texto">
 
@@ -33,32 +33,48 @@
 
             </div>
 
-        
+        </div>
 
         <!-- Botón para encriptar -->
             <div class="botones-encripcion">
 
-                <button type="button" class="boton-encriptar">Encriptar</button>
+                <input type="button" class="boton-encriptar" value="encriptar">Encriptar</input>
 
             <!-- Botón para desencriptar -->
-                <button type="button" class="boton-desencriptar">Desencriptar</button>
+                <input type="button" class="boton-desencriptar" value="desencriptar">Desencriptar</input>
 
             </div>
 
-        </div>
-    
+    </section>
+    <section class="seccion-2">
     <!-- Área para ver el texto encriptado o desencriptado-->
-        <div class="texto-encriptado">
+        <div class="muñeco">
 
             <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
 
+        </div>
+
+        <div class="contenedor-bajoMuñeco">
+
             <h2 class="mensaje-destacado">Ningún mensaje fue encontrado</h2>
 
-            <textarea class="textarea-disabled" disabled placeholder="Ingresa el texto que deseas encriptar o desencriptar en el área de su izquierda"></textarea>
+            <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
 
         </div>
 
-    </div>
+        <div class="contenedor-copiar">
+
+            <input type="button" class="boton-copiar" value="Copiar">Copiar</input>
+
+        </div>
+
+        <div class="contenedor-resultado">
+
+            <p class="texto-resultado"></p>
+
+        </div>
+
+    </section>
 
     <footer>
 
