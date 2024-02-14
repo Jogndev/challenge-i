@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400$display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
 <body>
@@ -14,68 +15,72 @@
         
     </header>
 
-    <h1 class="titulo">Encriptador</h1>
+    <main>
 
-    <!-- Formulario para introducir el texto a encriptar -->
-    <section class="seccion-1">
+        <h1 class="titulo">Encriptador</h1>
 
-        <div class="ingreso-texto">
+        <!-- Formulario para introducir el texto a encriptar -->
+        <section class="seccion-1">
 
-            <label class="label-input" for="input-texto">Ingresa tu texto:</label>
+            <div class="ingreso-texto">
 
-            <textarea id="input-texto" class="ingreso" placeholder="Ingrese su texto aquí"></textarea>
+                <label class="label-input" for="input-texto">Ingresa tu texto:</label>
 
-            <div class="mensaje">
+                <textarea id="input-texto" class="ingreso" placeholder="Ingrese su texto aquí"></textarea>
 
-                <img class="mensaje-icono" src="images/exclamacion.png">
+                <div class="mensaje">
 
-                <p class="mensaje-texto">Solo letras minúsculas y sin tildes</p>
+                    <img class="mensaje-icono" src="images/exclamacion.png">
 
-            </div>
+                    <p class="mensaje-texto">Solo letras minúsculas y sin tildes</p>
 
-        </div>
-
-        <!-- Botón para encriptar -->
-            <div class="botones-encripcion">
-
-                <input type="button" class="boton-encriptar" value="Encriptar"></input>
-
-            <!-- Botón para desencriptar -->
-                <input type="button" class="boton-desencriptar" value="Desencriptar"></input>
+                </div>
 
             </div>
 
-    </section>
-    <section class="seccion-2">
-    <!-- Área para ver el texto encriptado o desencriptado-->
-        <div class="muñeco">
+            <!-- Botón para encriptar -->
+                <div class="botones-encripcion">
 
-            <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
+                    <input type="button" class="boton-encriptar" value="Encriptar"></input>
 
-        </div>
+                <!-- Botón para desencriptar -->
+                    <input type="button" class="boton-desencriptar" value="Desencriptar"></input>
 
-        <div class="contenedor-bajoMuñeco">
+                </div>
 
-            <h2 class="mensaje-destacado">Ningún mensaje fue encontrado</h2>
+        </section>
+        <section class="seccion-2">
+        <!-- Área para ver el texto encriptado o desencriptado-->
+            <div class="muñeco">
 
-            <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+                <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
 
-        </div>
+            </div>
 
-        <div class="contenedor-copiar">
+            <div class="contenedor-bajoMuñeco">
 
-            <input type="button" class="boton-copiar" value="Copiar"></input>
+                <h2 class="mensaje-destacado">Ningún mensaje fue encontrado</h2>
 
-        </div>
+                <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
 
-        <div class="contenedor-resultado">
+            </div>
 
-            <p class="texto-resultado"></p>
+            <div class="contenedor-copiar">
 
-        </div>
+                <input type="button" class="boton-copiar" value="Copiar"></input>
 
-    </section>
+            </div>
 
+            <div class="contenedor-resultado">
+
+                <p class="texto-resultado"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+    
     <footer>
 
         <p class="presentacion-desarrollador">Desarrollado por JOGN-Teacher-dev como el primer challenge para el programa Oracle ONE</p>
