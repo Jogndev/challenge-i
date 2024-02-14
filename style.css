@@ -98,16 +98,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;    
 }
 
-.textarea-disabled {
-    width: 100%;
-    resize: none;
-}
-
-.textarea-disabled::placeholder {
-    font-size: 1em;
-    color: #072B61;
-}
-
 footer {
     flex-direction: column;
     background-color: #072B61;
