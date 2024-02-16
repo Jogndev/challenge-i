@@ -27,35 +27,32 @@ function recuperarTexto() {
 
 function ocultarAdelante() {
     muneco.classList.add("ocultar");
-    contenedor-muneco.classList.add("ocultar");
+    contenedor.classList.add("ocultar");
 }
 
-function encriptarTexto(mensaje) {
-    let texto = mensaje;
-    let textoFinal = "";
+function encriptarTexto (texto) {
+    let listaClave = [
+        ["a", "ai"],
+        ["e", "enter"],
+        ["i", "imes"],
+        ["o", "ober"],
+        ["u", "ufat"]
+    ];
     
-    for (let i = 0; i < texto.lenght; i++) {
-        if (texto[i] == "a") {
-            textoFinal = textoFinal + "ai";
-        }
-        else if (texto[i] == "e") {
-            textoFinal = textoFinal + "enter";
-        }
-        else if (texto[i] == "i") {
-            textoFinal = textoFinal + "imes";
-        }
-        else if (texto[i] == "o") {
-            textoFinal = textoFinal + "ober";
-        }
-        else if (texto[i] == "u") {
-            textoFinal = textoFinal + "ufat";
-        }
-        else {
-            textoFinal = textoFinal + texto[i];
+    texto = texto.toLowerCase();
+    
+    for (let i = 0; i < listaClave.lenght; i++) {
+        if (texto.includes(listaClave[i][0])) {
+            texto = texto.replaceAll(listaClave[i][0], listaClave[i][1]);
         }
     }
-    return textoFinal;
-}
+
+    return texto;
+};
+
+
+
+
 
 function desencriptarTexto(mensaje) {
     let texto = mensaje;

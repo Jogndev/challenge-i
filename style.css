@@ -138,7 +138,7 @@ main {
     padding-top: 50px;
 }
 
-.contenedor-bajoMuneco {
+.contenedorBajoMuneco {
     box-sizing: border-box;
     top: 570px;
     left: 40px;
@@ -152,7 +152,7 @@ main {
     color: #343A40;
 } 
 
-.contenedor-bajoMuñeco p {
+.contenedorBajomuneco p {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
