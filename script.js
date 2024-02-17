@@ -1,8 +1,9 @@
-let botonEncriptar = document.querySelector(".boton-encriptar");
-let botonDesencriptar = document.querySelector(".boton-desencriptar");
-let muneco = document.querySelector(".muneco");
-let contenedor = document.querySelector(".contenedor-bajoMuneco");
-let resultado = document.querySelector(".texto-resultado");
+let botonEncriptar = document.querySelector(".botonEncriptar");
+let botonDesencriptar = document.querySelector(".botonDesencriptar");
+let contenedorMuneco = document.querySelector(".contenedorMuneco");
+let contenedorBajoMuneco = document.querySelector(".contenedorBajoMuneco");
+let resultado = document.querySelector(".textoResultado");
+let texto = document.querySelector(".texto");
 
 botonEncriptar.addEventListener("click", encriptar);
 
@@ -21,13 +22,13 @@ function desencriptar() {
 }
 
 function recuperarTexto() {
-    let cajaTexto = document.querySelector(".ingreso");
+    let cajaTexto = document.querySelector(".texto");
     return cajaTexto.value;
 }
 
 function ocultarAdelante() {
-    muneco.classList.add("ocultar");
-    contenedor.classList.add("ocultar");
+    contenedorMuneco.classList.add("ocultar");
+    contenedorBajoMuneco.classList.add("ocultar");
 }
 
 function encriptarTexto (texto) {
@@ -41,7 +42,7 @@ function encriptarTexto (texto) {
     
     texto = texto.toLowerCase();
     
-    for (let i = 0; i < listaClave.lenght; i++) {
+    for (let i = 0; i < .lenght; i++) {
         if (texto.includes(listaClave[i][0])) {
             texto = texto.replaceAll(listaClave[i][0], listaClave[i][1]);
         }
@@ -86,8 +87,8 @@ function desencriptarTexto(mensaje) {
     return textoFinal;
 }
 
-let botonCopiar = document.querySelector("boton-copiar");
+let botonCopiar = document.querySelector(".botonCopiar");
     botonCopiar.addEventListener("click", copiar = () => {
-        let contenido = document.querySelector(".texto-resultado").textContent;
+        let contenido = document.querySelector(".textoResultado").textContent;
         navigator.clipboard.writeText(contenido);
     });
