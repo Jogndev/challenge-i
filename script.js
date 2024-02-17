@@ -9,28 +9,6 @@ botonEncriptar.addEventListener("click", encriptar);
 
 botonDesencriptar.addEventListener("click", desencriptar);
 
-function encriptar () {
-    ocultarAdelante();
-    let cajaTexto = recuperarTexto();
-    resultado.textContent = encriptarTexto(cajaTexto);
-}
-
-function desencriptar() {
-    ocultarAdelante();
-    let cajaTexto = recuperarTexto();
-    resultado.textContent = desencriptarTexto(cajaTexto);
-}
-
-function recuperarTexto() {
-    let cajaTexto = document.querySelector(".texto");
-    return cajaTexto.value;
-}
-
-function ocultarAdelante() {
-    contenedorMuneco.classList.add("ocultar");
-    contenedorBajoMuneco.classList.add("ocultar");
-}
-
 function encriptarTexto (texto) {
     let listaClave = [
         ["a", "ai"],
@@ -42,7 +20,7 @@ function encriptarTexto (texto) {
     
     texto = texto.toLowerCase();
     
-    for (let i = 0; i < listaClave.lenght; i++) {
+    for (let i = 0; i < listaClave.length; i++) {
         if (texto.includes(listaClave[i][0])) {
             texto = texto.replaceAll(listaClave[i][0], listaClave[i][1]);
         }
@@ -52,14 +30,11 @@ function encriptarTexto (texto) {
 };
 
 
-
-
-
 function desencriptarTexto(mensaje) {
     let texto = mensaje;
     let textoFinal  = "";
 
-    for (let i = 0; i < texto.lenght; i++) {
+    for (let i = 0; i < texto.length; i++) {
         if (texto[i] == "a") {
             textoFinal = textoFinal + "a";
             i = i+1;
@@ -85,6 +60,28 @@ function desencriptarTexto(mensaje) {
         }
     }
     return textoFinal;
+}
+
+function encriptar () {
+    ocultarAdelante();
+    let cajaTexto = recuperarTexto();
+    resultado.textContent = encriptarTexto(cajaTexto);
+}
+
+function desencriptar() {
+    ocultarAdelante();
+    let cajaTexto = recuperarTexto();
+    resultado.textContent = desencriptarTexto(cajaTexto);
+}
+
+function recuperarTexto() {
+    let cajaTexto = document.querySelector(".texto");
+    return cajaTexto.value;
+}
+
+function ocultarAdelante() {
+    contenedorMuneco.classList.add("ocultar");
+    contenedorBajoMuneco.classList.add("ocultar");
 }
 
 let botonCopiar = document.querySelector(".botonCopiar");
