@@ -29,38 +29,23 @@ function encriptarTexto (texto) {
     return texto;
 };
 
+function desencriptarTexto(texto) {
+    let listaClave = [
+        ["ai", "a"],
+        ["enter", "e"],
+        ["imes", "i"],
+        ["ober", "o"],
+        ["ufat", "u"]
+    ];
+    texto = texto.toLowerCase();
 
-function desencriptarTexto(mensaje) {
-    let texto = mensaje;
-    let textoFinal  = "";
-
-    for (let i = 0; i < texto.length; i++) {
-        if (texto[i] == "a") {
-            textoFinal = textoFinal + "a";
-            i = i+1;
-        }
-        else if (texto[i] == "e") {
-            textoFinal = textoFinal + "e";
-            i = i+2;
-        }
-        else if (texto[i] == "i") {
-            textoFinal = textoFinal + "i";
-            i = i+3;
-        }
-        else if (texto[i] == "o") {
-            textoFinal = textoFinal + "o";
-            i = i+4;
-        }
-        else if (texto[i] == "u") {
-            textoFinal = textoFinal + "u";
-            i = i+5;
-        }
-        else {
-            textoFinal = textoFinal + texto[i];
-        }
+    for (let i = 0; i < listaClave.length; i++) {
+        let clave = listaClave[i];
+        let regex = new RegExp("\\b" + clave[0] + "\\b", "g");
+        texto = texto.replace(regex, clave[1]);
     }
-    return textoFinal;
-}
+    return texto;
+};
 
 function encriptar () {
     ocultarAdelante();
@@ -69,9 +54,9 @@ function encriptar () {
 }
 
 function desencriptar() {
-    ocultarAdelante();
     let cajaTexto = recuperarTexto();
     resultado.textContent = desencriptarTexto(cajaTexto);
+    ocultarAdelante();
 }
 
 function recuperarTexto() {
@@ -87,5 +72,10 @@ function ocultarAdelante() {
 let botonCopiar = document.querySelector(".botonCopiar");
     botonCopiar.addEventListener("click", copiar = () => {
         let contenido = document.querySelector(".textoResultado").textContent;
-        navigator.clipboard.writeText(contenido);
+        navigator.clipboard.writeText(contenido).then(() => {
+            alert("texto copiado al portapapeles");
+        }).catch((err) => {
+            console.error('error al copiar el texto', err);
+        });
     });
+    
