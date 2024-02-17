@@ -42,7 +42,7 @@ function encriptarTexto (texto) {
     
     texto = texto.toLowerCase();
     
-    for (let i = 0; i < .lenght; i++) {
+    for (let i = 0; i < listaClave.lenght; i++) {
         if (texto.includes(listaClave[i][0])) {
             texto = texto.replaceAll(listaClave[i][0], listaClave[i][1]);
         }
