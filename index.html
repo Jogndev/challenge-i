@@ -13,80 +13,73 @@
     <title>Encriptador</title>
 </head>
 <body>
+    <header>
 
-    <div id="contenedorPrincipal">
+        <img class="logo" src="images/Logo.svg" alt="logo de alura">
+        
+    </header>
+    <main>
+        <!-- Sección de la izquierda -->
+        <section class="seccionUno">
+            <!-- contenedor entrada de texto -->
+            <div class="contenedorTexto">
 
-        <header>
+                <textarea id="mensaje" rows="8" class="mensaje" placeholder="Ingrese su texto aquí"></textarea>
 
-            <img class="logo" src="images/Logo.svg" alt="logo de alura">
-            
-        </header>
+            </div>
 
-        <main>
+            <div class="mensaje">
 
-            <!-- Formulario para introducir el texto a encriptar -->
-            <section class="seccionUno">
+                <img class="mensajeIcono" src="images/exclamacion.png">
 
-                <div class="contenedorTexto">
+                <p class="mensajeTexto">Solo letras minúsculas y sin tildes</p>
 
-                    <textarea class="texto" placeholder="Ingrese su texto aquí"></textarea>
+            </div>
 
-                </div>
+            <div class="botonesEncriptacion">
 
-                <div class="mensaje">
+                <!-- Botón para encriptar -->
+                <input type="button" class="botonEncriptar" value="Encriptar"></input>
 
-                    <img class="mensajeIcono" src="images/exclamacion.png">
+                <!-- Botón para desencriptar -->
+                <input type="button" class="botonDesencriptar" value="Desencriptar"></input>
 
-                    <p class="mensajeTexto">Solo letras minúsculas y sin tildes</p>
+            </div>
 
-                </div>
+        </section>
+        <!-- Sección de la derecha -->
+        <section class="seccionDos">
 
-                <div class="botonesEncriptacion">
+        
+            <div class="contenedorMuneco">
 
-                    <!-- Botón para encriptar -->
-                    <input type="button" class="botonEncriptar" value="Encriptar"></input>
+                <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
 
-                    <!-- Botón para desencriptar -->
-                    <input type="button" class="botonDesencriptar" value="Desencriptar"></input>
+            </div>
 
-                </div>
+            <div class="contenedorBajoMuneco">
 
-            </section>
+                <h2 class="mensajeDestacado">Ningún mensaje fue encontrado</h2>
 
-            <section class="seccionDos">
+                <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
 
-            <!-- Área para ver el texto encriptado o desencriptado-->
-                <div class="contenedorMuneco">
+            </div>
 
-                    <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
+            <div class="contenedorCopiar">
 
-                </div>
+                <input type="button" class="botonCopiar" value="Copiar"></input>
 
-                <div class="contenedorBajoMuneco">
+            </div>
 
-                    <h2 class="mensajeDestacado">Ningún mensaje fue encontrado</h2>
+            <div class="contenedorResultado">
 
-                    <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+                <p class="textoResultado"></p>
 
-                </div>
+            </div>
 
-                <div class="contenedorCopiar">
+        </section>
 
-                    <input type="button" class="botonCopiar" value="Copiar"></input>
-
-                </div>
-
-                <div class="contenedorResultado">
-
-                    <p class="textoResultado"></p>
-
-                </div>
-
-            </section>
-
-        </main>
-
-    </div>
+    </main>
 
     <script src="script.js"></script>
 </body>

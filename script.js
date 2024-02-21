@@ -1,3 +1,5 @@
+// Definición botones y texto entrada y salida //
+
 let botonEncriptar = document.querySelector(".botonEncriptar");
 let botonDesencriptar = document.querySelector(".botonDesencriptar");
 let contenedorMuneco = document.querySelector(".contenedorMuneco");
