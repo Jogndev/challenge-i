@@ -138,12 +138,6 @@ main {
     padding-top: 50px;
 }
 
-.contenedorBajoMuneco {
-    box-sizing: border-box;
-    top: 570px;
-    left: 40px;
-}
-
 .mensajeDestacado {
     font-size: 24px;
     font-weight: 700;
@@ -151,15 +145,6 @@ main {
     text-align: center;    
     color: #343A40;
 } 
-
-.contenedorBajoMuneco p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: #495057;
-    padding-top: 20px;
-}
 
 .contenedorCopiar {
     display: flex;
@@ -197,6 +182,15 @@ main {
 .textoResultado {
     color: #495057;
     font-size: 25px;
+}
+
+footer {
+    text-align: center;
+    margin: 0;
+    padding-top: 1em;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 .ocultar {

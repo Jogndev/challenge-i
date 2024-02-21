@@ -66,7 +66,6 @@ function recuperarTexto() {
 
 function ocultarAdelante() {
     contenedorMuneco.classList.add("ocultar");
-    contenedorBajoMuneco.classList.add("ocultar");
 }
 
 let botonCopiar = document.querySelector(".botonCopiar");
