@@ -28,52 +28,47 @@
 
             </div>
 
-            <div class="mensaje">
+            <div class="alerta">
 
                 <img class="mensajeIcono" src="images/exclamacion.png">
 
-                <p class="mensajeTexto">Solo letras minúsculas y sin tildes</p>
+                <p class="alertaTexto">Solo letras minúsculas y sin tildes</p>
 
             </div>
 
             <div class="botonesEncriptacion">
 
                 <!-- Botón para encriptar -->
-                <input type="button" class="botonEncriptar" value="Encriptar"></input>
+                <input id="botonEncriptar" type="button" class="botonEncriptar" value="Encriptar"></input>
 
                 <!-- Botón para desencriptar -->
-                <input type="button" class="botonDesencriptar" value="Desencriptar"></input>
+                <input id="botonDesencriptar" type="button" class="botonDesencriptar" value="Desencriptar"></input>
 
             </div>
 
         </section>
         <!-- Sección de la derecha -->
         <section class="seccionDos">
-
         
-            <div class="contenedorMuneco">
+            <div id="contenedorMuneco" class="contenedorMuneco">
 
                 <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
-
-            </div>
-
-            <div class="contenedorBajoMuneco">
 
                 <h2 class="mensajeDestacado">Ningún mensaje fue encontrado</h2>
 
                 <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
-
-            </div>
-
-            <div class="contenedorCopiar">
-
-                <input type="button" class="botonCopiar" value="Copiar"></input>
-
+            
             </div>
 
             <div class="contenedorResultado">
 
-                <p class="textoResultado"></p>
+                <p id="textoResultado" class="textoResultado"></p>
+
+            </div>
+            
+            <div class="contenedorCopiar">
+
+                <input type="button" class="botonCopiar" value="Copiar"></input>
 
             </div>
 

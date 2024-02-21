@@ -1,11 +1,10 @@
 // Definición botones y texto entrada y salida //
 
-let botonEncriptar = document.querySelector(".botonEncriptar");
-let botonDesencriptar = document.querySelector(".botonDesencriptar");
-let contenedorMuneco = document.querySelector(".contenedorMuneco");
-let contenedorBajoMuneco = document.querySelector(".contenedorBajoMuneco");
-let resultado = document.querySelector(".textoResultado");
-let texto = document.querySelector(".texto");
+let botonEncriptar = document.getElementById("botonEncriptar");
+let botonDesencriptar = document.getElementById("botonDesencriptar");
+let contenedorMuneco = getElementById("contenedorMuneco");
+let resultado = document.getElementById("textoResultado");
+let mensaje = document.getElementById("mensaje");
 
 botonEncriptar.addEventListener("click", encriptar);
 
