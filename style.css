@@ -47,6 +47,11 @@ main {
     outline: none;
 }
 
+.alertaTexto {
+    color: #495057;
+    font-size: 18px;
+}
+
 .botonesEncriptacion {
     display: flex;
     margin-top: 18px;
