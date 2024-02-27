@@ -18,6 +18,28 @@ function botonDesencriptar() {
     textArea.value  = "";
 }
 
+async function botonCopiar() {
+    // Obtén el textarea con la clase 'mensajeEncriptado'
+    const textarea = document.querySelector('.mensajeEncriptado');
+
+    // Verifica si el navegador admite la API Clipboard Web
+    if (navigator.clipboard) {
+        try {
+            // Copia el texto del textarea al portapapeles
+            await navigator.clipboard.writeText(textarea.value);
+
+            // Muestra un mensaje de éxito
+            alert('Texto copiado al portapapeles');
+        } catch (err) {
+            // Muestra un mensaje de error si no se pudo copiar el texto
+            alert('No se pudo copiar el texto al portapapeles: ' + err.message);
+        }
+    } else {
+        // Si el navegador no admite la API Clipboard Web, muestra un mensaje de error
+        alert('Tu navegador no admite la API Clipboard Web. Por favor, utiliza un navegador más moderno.');
+    }
+}
+
 // Función encriptar //
 function encriptar(stringEncriptada) {
     let matrizCodigo = [["e", "enter"],["i", "imes"],["a", "ai"],["o", "ober"],["u", "ufat"]];
