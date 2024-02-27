@@ -8,6 +8,8 @@ const mensaje = document.querySelector(".mensajeEncriptado");
 function botonEncriptar() {
     const textoEncriptado = encriptar(textArea.value);
     mensaje.value = textoEncriptado;
+    textArea.value = "";
+    mensaje.style.backgroundImage = "none";
 }
 
 // Función encriptar //
@@ -25,21 +27,6 @@ function encriptar(stringEncriptada) {
 
 
 // Función desencriptar //
-
-
-
-// Función revisar mayúsculas //
-
-
-
-// Limpieza de la caja de texto mensaje //
-
-
-// Ocultar contenedorMuneco //
-
-
-
-// Mostrar contenedorMuneco //
 
 
 
