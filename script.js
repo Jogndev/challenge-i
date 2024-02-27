@@ -10,30 +10,17 @@ function botonEncriptar() {
     mensaje.value = textoEncriptado;
 }
 
-botonCopiar.addEventListener("click", copiar = () => {
-        let contenido = document.getElementById("textoResultado").textContent;
-        navigator.clipboard.writeText(contenido).then(() => {
-            alert("texto copiado al portapapeles");
-        }).catch((err) => {
-            console.error('error al copiar el texto', err);
-        });
-    });
-
 // Función encriptar //
-function encriptar(stringEncriptado) {
-    let matrizCodigo = [
-        ["e", "enter"],
-        ["i", "imes"],
-        ["a", "ai"],
-        ["o", "ober"],
-        ["u", "ufat"]
-    ];
-    stringEncriptado = stringEncriptado.toLowerCase();
-    for (let i = 0; i < matrizCodigo.length; i++ ) {
-        if (stringEncriptado.includes(matrizCodigo[i][0])) {
-            stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+function encriptar(stringEncriptada) {
+    let matrizCodigo = [["e", "enter"],["i", "imes"],["a", "ai"],["o", "ober"],["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase()
+
+    for(let i = 0; i < matrizCodigo.length; i++ ) {
+        if(stringEncriptada.includes(matrizCodigo[i][0])){
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
         }
     }
+    return stringEncriptada;
 }
 
 

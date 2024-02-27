@@ -43,6 +43,7 @@ main {
     padding-left: 20px;
     position: fixed;
     resize: none;
+    background-position: center;
 }
 
 .mensajeEncriptado:focus {
