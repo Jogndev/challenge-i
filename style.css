@@ -23,6 +23,7 @@ main {
     color: #0A3871;
     margin-top: 90px;
     text-transform: lowercase;
+    resize: none;
 }
 
 ::placeholder { color: #0A3871;}
@@ -41,10 +42,22 @@ main {
     margin-top: 20px;
     padding-left: 20px;
     position: fixed;
+    resize: none;
 }
 
 .mensajeEncriptado:focus {
     outline: none;
+}
+
+.alerta {
+    display: flex;
+    align-items: center;
+    
+}
+
+.alertaIcono {
+    height: 18px;
+    margin-right: 5px;
 }
 
 .alertaTexto {
@@ -88,4 +101,16 @@ main {
     margin-top: 402px;
     position: absolute;
     width: 336px;
+    background-position: center;
+    position: fixed;
+
+}
+
+footer {
+    text-align: center;
+    font-size: 0.6em;
+}
+
+footer a {
+    font-size: 1em;
 }
