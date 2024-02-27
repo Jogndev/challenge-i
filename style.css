@@ -1,189 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400$display=swap');
-
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-}
-
-body {
-    background-color: #f4f4fc;
-    height: 90vh;
-}
-
-#contenedorPrincipal {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-}
-
-header {
-    width: 100%;
-    height: 10vh;
+    background: #f3f5fc;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
 }
 
 .logo {
-    width: 100px;
-    height: 50px;
-    padding-top: 20px;
-    padding-left: 40px;
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 10%;
 }
 
 main {
-    width: 100%;
-    height: 90vh;    
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-left: 80px;
 }
 
-.seccionUno {
-    width: 75%;
-    margin-top: 100px;
-}
-
-.contenedorTexto {
-    left: 200px;
-    top: 100px;
-    padding-left: 100px;
-    width: 1080px;
-    height: 500px;
-}
-
-.mensaje {
-    width: 80%;
-    height: 100%;
+.text-area {
     border: none;
-    background-color: #f4f4fc;
-    cursor: pointer;
     color: #0A3871;
-    font-size: 32px;
-    font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    margin-top: 90px;
+    text-transform: lowercase;
 }
 
-.mensaje::placeholder {
+::placeholder { color: #0A3871;}
+    .text-area:focus {
+        outline: none;
+    }
+
+.mensajeEncriptado {
+    background: white;
+    background-image: url(images/Muñeco.png);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
     color: #0A3871;
+    margin-left: 78px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: fixed;
 }
 
-.alerta {
-    display: flex;
-    top: 550px;
-    left: 370px;
-    color: #495057;
-    padding-left: 100px;
-    padding-top: 15px;
+.mensajeEncriptado:focus {
+    outline: none;
 }
 
 .botonesEncriptacion {
-    top: 600px;
-    height: 80px;
-    padding-left: 15%;
-    padding-top: 15px;
-    margin-top: 50px;
+    display: flex;
+    margin-top: 18px;
 }
 
 .botonEncriptar {
     background-color: #0A3871;
-    color: #ffffff;
-    border: none;
+    border: 1px solid #0A3871;
     border-radius: 24px;
+    color: white;
     cursor: pointer;
     height: 67px;
     width: 328px;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Inter', sans-serif;
-    margin-right: 20px;
 }
 
 .botonDesencriptar {
-    background-color: #d8dfed;
-    color: #0A3871;
+    background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 24px;
+    color: #0A3871;
     cursor: pointer;
     height: 67px;
     width: 328px;
-    margin-right: 20px;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    margin-left: 30px;
 }
 
-.botonEncriptar:hover {
-    background-color: #072B61;
-}
-
-.botonDesencriptar:hover {
-    background-color: #eff1fa;
-}
-
-.seccionDos {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    height: 100%;
-    right: 200px;
-    padding-left: 20px;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.50);
-}
-
-.contenedorMuneco {
-    left: 30px;
-    top: 180px;
-    box-sizing: border-box;
-    padding-top: 50px;
-}
-
-.mensajeDestacado {
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-    text-align: center;    
-    color: #343A40;
-} 
-
-.contenedorResultado {
-    bottom: 330px;
-    width: 320px;
-    height: 450px;
-    padding: 0;
-    box-sizing: border-box;
-    margin-left: 25px;
-}
-
-.textoResultado {
-    color: #495057;
-    font-size: 25px;
-}
-
-.contenedorCopiar {
-    display: flex;
-    bottom: 400px;
-    top: 700px;
-    padding-left: 40px;
-    padding-top: 40px;
-    padding-right: 40px;
-}
-
-.botonCopiar {
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
-    background-color: #ffffff;
-    color: #0A3871;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Inter', sans-serif;
+.copiar {
     border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
     cursor: pointer;
-    top: 50px;
-    right: 4px;
-}
-
-.ocultar {
-    display: none;
+    height: 67px;
+    margin-left: 108px;
+    margin-top: 402px;
+    position: absolute;
+    width: 336px;
 }
