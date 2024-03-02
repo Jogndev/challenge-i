@@ -1,56 +1,56 @@
-let botonEncriptar = document.querySelector(".botonEncriptar");
-let botonDesencriptar = document.querySelector(".botonDesencriptar");
-let contenedorMuneco = document.querySelector(".contenedorMuneco");
-let contenedorBajoMuneco = document.querySelector(".contenedorBajoMuneco");
-let resultado = document.querySelector(".textoResultado");
-let texto = document.querySelector(".texto");
+// Definición botones y texto entrada y salida //
 
-botonEncriptar.addEventListener("click", encriptar);
+const textArea = document.querySelector(".text-area");
+const mensaje = document.querySelector(".mensajeEncriptado");
 
-botonDesencriptar.addEventListener("click", desencriptar);
+// Botones //
 
-function encriptarTexto (texto) {
-    let listaClave = [
-        ["a", "ai"],
-        ["e", "enter"],
-        ["i", "imes"],
-        ["o", "ober"],
-        ["u", "ufat"]
-    ];
-    
-    texto = texto.toLowerCase();
-    
-    for (let i = 0; i < listaClave.length; i++) {
-        if (texto.includes(listaClave[i][0])) {
-            texto = texto.replaceAll(listaClave[i][0], listaClave[i][1]);
+function botonEncriptar() {
+    const textoEncriptado = encriptar(textArea.value);
+    mensaje.value = textoEncriptado;
+    textArea.value = "";
+    mensaje.style.backgroundImage = "none";
+}
+
+function botonDesencriptar() {
+    const textoEncriptado = desencriptar(textArea.value);
+    mensaje.value = textoEncriptado;
+    textArea.value  = "";
+}
+
+async function botonCopiar() {
+    // Obtén el textarea con la clase 'mensajeEncriptado'
+    const textarea = document.querySelector('.mensajeEncriptado');
+
+    // Verifica si el navegador admite la API Clipboard Web
+    if (navigator.clipboard) {
+        try {
+            // Copia el texto del textarea al portapapeles
+            await navigator.clipboard.writeText(textarea.value);
+
+            // Muestra un mensaje de éxito
+            alert('Texto copiado al portapapeles');
+        } catch (err) {
+            // Muestra un mensaje de error si no se pudo copiar el texto
+            alert('No se pudo copiar el texto al portapapeles: ' + err.message);
+        }
+    } else {
+        // Si el navegador no admite la API Clipboard Web, muestra un mensaje de error
+        alert('Tu navegador no admite la API Clipboard Web. Por favor, utiliza un navegador más moderno.');
+    }
+}
+
+// Función encriptar //
+function encriptar(stringEncriptada) {
+    let matrizCodigo = [["e", "enter"],["i", "imes"],["a", "ai"],["o", "ober"],["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase()
+
+    for(let i = 0; i < matrizCodigo.length; i++ ) {
+        if(stringEncriptada.includes(matrizCodigo[i][0])){
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
         }
     }
-
-    return texto;
-};
-
-function desencriptarTexto(texto) {
-    let listaClave = [
-        ["ai", "a"],
-        ["enter", "e"],
-        ["imes", "i"],
-        ["ober", "o"],
-        ["ufat", "u"]
-    ];
-    texto = texto.toLowerCase();
-
-    for (let i = 0; i < listaClave.length; i++) {
-        let clave = listaClave[i];
-        let regex = new RegExp("\\b" + clave[0] + "\\b", "g");
-        texto = texto.replace(regex, clave[1]);
-    }
-    return texto;
-};
-
-function encriptar () {
-    ocultarAdelante();
-    let cajaTexto = recuperarTexto();
-    resultado.textContent = encriptarTexto(cajaTexto);
+    return stringEncriptada;
 }
 
 function desencriptar() {
@@ -66,6 +66,7 @@ function recuperarTexto() {
 
 function ocultarAdelante() {
     contenedorMuneco.classList.add("ocultar");
+    contenedorBajoMuneco.classList.add("ocultar");
 }
 
 let botonCopiar = document.querySelector(".botonCopiar");

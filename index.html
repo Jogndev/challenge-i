@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
     <title>Encriptador</title>
     
 </head>
@@ -18,69 +17,73 @@
 
             <img class="logo" src="images/Logo.svg" alt="logo de alura">
             
-    </header>
+        </header>
 
-    <main>
+        <main>
 
-        <!-- Formulario para introducir el texto a encriptar -->
-        <section class="seccionUno">
+            <!-- Formulario para introducir el texto a encriptar -->
+            <section class="seccionUno">
 
-            <div class="contenedorTexto">
+                <div class="contenedorTexto">
 
-                <textarea class="texto" placeholder="Ingrese su texto aquí"></textarea>
+                    <textarea class="texto" placeholder="Ingrese su texto aquí"></textarea>
 
-            </div>
+                </div>
 
-            <div class="mensaje">
+                <div class="mensaje">
 
-                <img class="mensajeIcono" src="images/exclamacion.png">
+                    <img class="mensajeIcono" src="images/exclamacion.png">
 
-                <p class="mensajeTexto">Solo letras minúsculas y sin tildes</p>
+                    <p class="mensajeTexto">Solo letras minúsculas y sin tildes</p>
 
             </div>
 
             <div class="botonesEncriptacion">
 
-                <!-- Botón para encriptar -->
-                <input type="button" class="botonEncriptar" value="Encriptar"></input>
+                    <!-- Botón para encriptar -->
+                    <input type="button" class="botonEncriptar" value="Encriptar"></input>
 
-                <!-- Botón para desencriptar -->
-                <input type="button" class="botonDesencriptar" value="Desencriptar"></input>
-
-            </div>
-
-        </section>
-
-        <section class="seccionDos">
-
-        <!-- Área para ver el texto encriptado o desencriptado-->
-            <div class="contenedorMuneco">
-
-                <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
-
-                <h2 class="mensajeDestacado">Ningún mensaje fue encontrado</h2>
-
-                <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+                    <!-- Botón para desencriptar -->
+                    <input type="button" class="botonDesencriptar" value="Desencriptar"></input>
 
             </div>
 
-            <div class="contenedorResultado">
+            </section>
 
-                <p class="textoResultado"></p>
+            <section class="seccionDos">
 
-            </div>
+            <!-- Área para ver el texto encriptado o desencriptado-->
+                <div class="contenedorMuneco">
 
-            <div class="contenedorCopiar">
+                    <img src="images/Muñeco.png" alt="persona sosteniendo una lupa">
 
-                <input type="button" class="botonCopiar" value="Copiar"></input>
+                </div>
 
-            </div>
+                <div class="contenedorBajoMuneco">
 
-        </section>
+                    <h2 class="mensajeDestacado">Ningún mensaje fue encontrado</h2>
+
+                    <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+
+                </div>
+
+                <div class="contenedorCopiar">
+
+                    <input type="button" class="botonCopiar" value="Copiar"></input>
+
+                </div>
+
+                <div class="contenedorResultado">
+
+                    <p class="textoResultado"></p>
+
+                </div>
+
+            </section>
 
     </main>
 
-    <script type="text/javascript"  src="script.js"></script>
+    </div>
 
     <footer>
         <p>Encriptador realizado por <a href="https://www.linkedin.com/in/jogn-teacher-dev/">jogn-teacher-dev para Alura ONE G6</a></p>
